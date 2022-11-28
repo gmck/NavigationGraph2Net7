@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">NavigationGraph2Net7</string>
+    <string name="action_settings">Settings</string>
+
+	<!--Settings fragment-->
+	<string name="general_category_title">General</string>
+	<string name="use_animations">Use Screen animations</string>
+	<string name="use_animations_summary">Animate the transition from one screen to another of all the screens associated with the side menu</string>
+	<!--Settings fragment-->
+</resources>

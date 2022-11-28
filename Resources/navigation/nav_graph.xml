@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<navigation
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@+id/import_fragment">
+
+	<fragment
+        android:id="@+id/import_fragment"
+        android:name="com.companyname.navigationgraph2net7.fragments.ImportFragment"
+        android:label="Import - Net7"
+        tools:layout="@layout/fragment_import" />
+
+	<fragment
+        android:id="@+id/gallery_fragment"
+        android:name="com.companyname.navigationgraph2net7.fragments.GalleryFragment"
+        android:label="Gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+	<fragment
+        android:id="@+id/slideshow_fragment"
+        android:name="com.companyname.navigationgraph2net7.fragments.SlideshowFragment"
+        android:label="SlideShow"
+        tools:layout="@layout/fragment_slideshow" />
+
+	<fragment
+        android:id="@+id/tools_fragment"
+        android:name="com.companyname.navigationgraph2net7.fragments.ToolsFragment"
+        android:label="Tools"
+        tools:layout="@layout/fragment_tools" />
+
+	<!--not a top destination-->
+	<fragment
+		android:id="@+id/settings_fragment"
+		android:name="com.companyname.navigationgraph2net7.fragments.SettingsFragment"
+		android:label="Settings"/>
+
+</navigation>

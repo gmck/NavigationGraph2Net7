@@ -1,0 +1,31 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+		
+		<item name="windowActionBar">false</item>
+		<item name="windowNoTitle">true</item>
+        
+		<!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+	<!--<style name="AppTheme.NoActionBar">
+		<item name="windowActionBar">false</item>
+		<item name="windowNoTitle">true</item>
+	</style>-->
+
+	<style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.MaterialComponents.Light" />
+
+
+	<style name="AppTheme.Starting" parent="Theme.SplashScreen.IconBackground">
+		<item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher_foreground</item>
+		<item name="windowSplashScreenIconBackgroundColor">@color/ic_launcher_background</item>
+		<item name="windowSplashScreenBackground">?android:colorBackground</item>
+		<item name="postSplashScreenTheme">@style/AppTheme</item>
+	</style>
+	
+</resources>
