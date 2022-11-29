@@ -66,7 +66,7 @@ namespace com.companyname.navigationgraph2net7
         #endregion
 
         #region OnDestinationChanged
-        //[SupportedOSPlatformAttribute("android28.0")]
+        [SupportedOSPlatformAttribute("android28.0")]
         //public void OnDestinationChanged(NavController navController, NavDestination navDestination, Bundle bundle)
         //{
         //    CheckForPreferenceChanges();
@@ -87,7 +87,7 @@ namespace com.companyname.navigationgraph2net7
         //    if (Build.VERSION.SdkInt >= BuildVersionCodes.P)
         //    {
         //        // Don't understand why we get this warning - when we are already checking for >= BuildVersionCodes.P. uncomment the pragma lines to see the SupportedOSPlatformVersion warning.
-                
+
         //        //#pragma warning disable CA1416 // Validate platform compatibility
         //        Window!.Attributes!.LayoutInDisplayCutoutMode = LayoutInDisplayCutoutMode.Default;
         //        //#pragma warning restore CA1416 // Validate platform compatibility
@@ -95,7 +95,6 @@ namespace com.companyname.navigationgraph2net7
 
         //}
         #endregion
-
 
         #region OnDestinationChanged
         [SupportedOSPlatformAttribute("android28.0")]
@@ -114,7 +113,6 @@ namespace com.companyname.navigationgraph2net7
                 Window!.Attributes!.LayoutInDisplayCutoutMode = LayoutInDisplayCutoutMode.Default;
         }
         #endregion
-
 
         #region OnCreateOptionsMenu
         public override bool OnCreateOptionsMenu(IMenu? menu)
