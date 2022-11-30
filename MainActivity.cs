@@ -11,6 +11,7 @@ using AndroidX.Navigation.Fragment;
 using AndroidX.Navigation.UI;
 using AndroidX.Preference;
 using Google.Android.Material.Navigation;
+using System;
 using System.Runtime.Versioning;
 
 namespace com.companyname.navigationgraph2net7
@@ -97,7 +98,7 @@ namespace com.companyname.navigationgraph2net7
         #endregion
 
         #region OnDestinationChanged
-        [SupportedOSPlatformAttribute("android28.0")]
+
         public void OnDestinationChanged(NavController navController, NavDestination navDestination, Bundle bundle)
         {
             CheckForPreferenceChanges();
@@ -105,12 +106,13 @@ namespace com.companyname.navigationgraph2net7
             // The first menu item is not checked by default, so we need to check it to show it is selected on the startDestination fragment
             navigationView!.Menu.FindItem(Resource.Id.import_fragment)!.SetChecked(navDestination.Id == Resource.Id.import_fragment);
 
-            // Required  LayoutInDisplayCutoutMode.Default to correct distorted view in landscape after including the Splash Screen API - See docs for an image of what the landscape view looked like.
+            // Required  LayoutInDisplayCutoutMode.Default to correct distorted view in landscape after including the Splash Screen API - See docx file for an image of what the landscape view looked like.
             // Remove all the Splash Screen API stuff reverting back to original in NavigationGraph2 (which didn't include Xamarin.AndroidX.Core.SplashScreen because it wasn't available at that time) restores the correct behaviour.
 
             // Include this if using the Splash Screen API
-            if (Build.VERSION.SdkInt >= BuildVersionCodes.P)
+            if (OperatingSystem.IsAndroidVersionAtLeast(28)) 
                 Window!.Attributes!.LayoutInDisplayCutoutMode = LayoutInDisplayCutoutMode.Default;
+
         }
         #endregion
 
